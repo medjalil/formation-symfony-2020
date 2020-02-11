@@ -17,4 +17,5 @@ class CategoryFixtures extends Fixture
         }
         $manager->flush();
     }
+  //  public function post
 }
