@@ -3,32 +3,30 @@
 {% block title %}Liste de categories{% endblock %}
 
 {% block body %}
- <a href="{{ path('category_new') }}" class="btn btn-primary  float-right">Ajouter categorie</a>
-    <h1>Liste de categories</h1>
-<hr>
+    <a href="{{ path('category_new') }}" class="btn btn-primary  float-right">Ajouter categorie</a>
+    <h1>Liste des catégories</h1>
+    <hr>
     <table class="table table-bordered">
         <thead>
             <tr>
-                               <th>Name</th>
+                <th>Name</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-        {% for category in categories %}
-            <tr>
-                                <td><a href="{{ path('category_show', {'id': category.id}) }}">{{ category.name }}</a></td>
-                <td>
-                    
-                    <a href="{{ path('category_edit', {'id': category.id}) }}">modifier</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr class="table-danger">
-                <td colspan="2" class="text-center">Aucun enregistrement!</td>
-            </tr>
-        {% endfor %}
+            {% for category in categories %}
+                <tr>
+                    <td><a href="{{ path('category_show', {'id': category.id}) }}">{{ category.name }}</a></td>
+                    <td>
+
+                        <a href="{{ path('category_edit', {'id': category.id}) }}">modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr class="table-danger">
+                    <td colspan="2" class="text-center">Aucun enregistrement!</td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
-
-   
 {% endblock %}

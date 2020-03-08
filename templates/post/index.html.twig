@@ -6,34 +6,25 @@
     <a href="{{ path('post_new') }}" class="btn btn-primary float-right">Ajouter article</a>
     <h1>Liste des articles</h1>
     <hr>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Titre</th>
-                <th>Image</th>
-                <th>Ajouter Le</th>
-                <th>Categorie</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for post in posts %}
-                <tr>
-                    <td> <a href="{{ path('post_show', {'id': post.id}) }}">{{ post.title }}</a></td>
-                    <td><img src="{{ post.image }}" width="100px"></td>
-                    <td>{{ post.category }}</td>
-                    <td>{{ post.createdAt ? post.createdAt|date('d/m/Y') : '' }}</td>
-                    <td>
-                        <a href="{{ path('post_edit', {'id': post.id}) }}">Modifier</a>
-                    </td>
-                </tr>
-            {% else %}
+
+    <div class="card-columns">
+        {% for post in posts %}
+            <div class="card">
+                <img class="card-img-top" src="{{ post.image }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{{ path('post_show', {'id': post.id}) }}">{{ post.title }}</a></h5>
+                    <p class="card-text">{{ post.category }} - {{ post.createdAt ? post.createdAt|date('d/m/Y') : '' }}</p>
+                    <a href="{{ path('post_edit', {'id': post.id}) }}" class="btn btn-primary">Modifier</a>
+                </div>
+            </div>
+        {% else %}
+            <table>
                 <tr class="table-danger">
                     <td colspan="6" class="text-center">Aucun enregistrement!</td>
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </table>
+        {% endfor %}
+    </div>
 
     <div class="navigation">
         {{ knp_pagination_render(posts) }}
