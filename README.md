@@ -17,6 +17,11 @@ php bin/console assets:install public
 -	Gestion des Rôles (ROLE_USER, ROLE_ADMIN)
 ## Gestion des catégories
 -	Ajouter, Modifier et Supprimer Catégorie
-## Gestion de articles
+## Gestion des articles
 -	Ajouter, Modifier, Supprimer article
 ## Bundles externes
+```bash
+composer require --dev orm-fixtures
+composer require fzaninotto/faker
+composer require friendsofsymfony/ckeditor-bundle
+```
