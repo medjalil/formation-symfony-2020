@@ -1,6 +1,6 @@
 # Application de Blog
 
-Application de blog suite a formation Symfony 4  avec [@medjalil] (https://github.com/medjalil)
+Application de blog suite a formation Symfony 4  avec [@medjalil](https://github.com/medjalil)
 
 ## Les étapes d’installation
 
