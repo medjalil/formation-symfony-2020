@@ -11,9 +11,9 @@ php bin/console assets:install public
 ## Espace membre
 -	Connexion 
 -	Inscription
--	~~Oublié mot de passe
--	~~Changer mot de passe
--	~~Ajouter, Modifier, Supprimer et Activer/Désactiver compte utilisateur : Version Avancée
+-	~~Oublié mot de passe~~
+-	~~Changer mot de passe~~
+-	~~Ajouter, Modifier, Supprimer et Activer/Désactiver compte utilisateur : Version Avancée~~
 -	Gestion des Rôles (ROLE_USER, ROLE_ADMIN)
 ## Gestion des catégories
 -	Ajouter, Modifier et Supprimer Catégorie
